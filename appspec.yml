@@ -8,12 +8,12 @@ hooks:
   BeforeInstall:
     - location: scripts/clean_app_folder.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
     - location: scripts/start_container.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
